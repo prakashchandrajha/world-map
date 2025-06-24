@@ -1,0 +1,60 @@
+<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+  <div class="relative h-full w-full flex items-center justify-center mt-25">
+    <div class="profileCard_container relative p-42 border-5 border-dashed rounded-full border-spacing-10 border-gray-400/50">
+      <!-- Dynamic Profile Items -->
+      <button *ngFor="let item of items"
+        class="profile_item absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[5px] active:scale-95 hover:scale-95 transition-all duration-500"
+        [style]="item.position"
+        (click)="openModal(item)">
+        <span class="block w-[150px] h-[150px] transition-all duration-500 rounded-full z-[2] bg-white p-2.5">
+          <div class="w-full h-full flex flex-col justify-center items-center text-neutral-700 relative overflow-hidden">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+              class="absolute blur z-10 fill-red-300 duration-500 group-hover:blur-none group-hover:scale-105">
+              <path transform="translate(100 100)"
+                d="M39.5,-49.6C54.8,-43.2,73.2,-36.5,78.2,-24.6C83.2,-12.7,74.8,4.4,69,22.5C63.3,40.6,60.2,59.6,49.1,64.8C38.1,70,19,61.5,0.6,60.7C-17.9,59.9,-35.9,67,-47.2,61.9C-58.6,56.7,-63.4,39.5,-70,22.1C-76.6,4.7,-84.9,-12.8,-81.9,-28.1C-79,-43.3,-64.6,-56.3,-49.1,-62.5C-33.6,-68.8,-16.8,-68.3,-2.3,-65.1C12.1,-61.9,24.2,-55.9,39.5,-49.6Z">
+              </path>
+            </svg>
+
+            <div class="z-20 flex flex-col justify-center items-center">
+              <span class="font-bold text-xl">{{item.title}}</span>
+              <p *ngIf="item.subtitle" class="font-bold text-xs">{{item.subtitle}}</p>
+            </div>
+          </div>
+        </span>
+      </button>
+
+      <!-- Central Big Button -->
+      <button class="profile_item w-[500px] h-[500px] p-2.5 border-5 rounded-full hover:border-gray-400/50 cursor-pointer transition-all duration-500 z-0">
+        <div class="w-full bg-white h-full flex items-center justify-center p-5 rounded-full active:scale-95 hover:scale-95 object-cover transition-all duration-500">
+          <span class="w-[350px] h-[350px] inline-block">
+            <img [src]="centerImage" alt=""
+              class="w-full h-full object-cover rounded-full animate-pulse">
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div *ngIf="showModal" class="fixed inset-0 bg-opacity-50 z-50 flex items-center justify-center">
+  <div class="modal-content group select-none w-[350px] flex flex-col p-6 relative items-center justify-center bg-gray-500 border border-gray-800 shadow-lg rounded-2xl">
+    <!-- Close button -->
+    <button (click)="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    
+    <!-- Modal content -->
+    <div class="mt-2 text-center">
+      <h2 class="text-xl font-bold text-gray-200 mb-2">{{selectedItem?.title}}</h2>
+      <p *ngIf="selectedItem?.subtitle" class="text-sm text-gray-400 mb-1">{{selectedItem?.subtitle}}</p>
+      <p class="text-gray-300 text-sm">{{selectedItem?.description}}</p>
+    </div>
+  </div>
+</div>
