@@ -31,14 +31,14 @@ export class WorldMapComponent implements OnInit {
 
     // Add base tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors',
+      // attribution: '© OpenStreetMap contributors',
       maxZoom: 18,
       errorTileUrl: 'https://tile.openstreetmap.org/0/0/0.png'
     }).addTo(this.map);
 
     // Add satellite layer
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+      // attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
       maxZoom: 18
     }).addTo(this.map);
 

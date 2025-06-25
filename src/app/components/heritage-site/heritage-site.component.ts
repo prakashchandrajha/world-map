@@ -4,10 +4,11 @@ import { IntroductionC1Component } from "../introduction-c1/introduction-c1.comp
 import { FaqComponent } from "../faq/faq.component";
 import { ProfileCardComponent } from '../profile-card/profile-card.component';
 import { GalleryComponent } from "../gallery/gallery.component";
+import { TouristPlacesComponent } from "../tourist-places/tourist-places.component";
 
 @Component({
   selector: 'app-heritage-site',
-  imports: [CarouselComponent, IntroductionC1Component, FaqComponent, ProfileCardComponent, GalleryComponent],
+  imports: [CarouselComponent, IntroductionC1Component, FaqComponent, ProfileCardComponent, GalleryComponent, TouristPlacesComponent],
   templateUrl: './heritage-site.component.html',
   styleUrl: './heritage-site.component.css'
 })

@@ -1,0 +1,54 @@
+<div class="p-4 lg:mx-2">
+  <div class=" p-8 rounded-2xl flex flex-col lg:flex-row items-center justify-between">
+
+    <!-- Left: Text Content -->
+     
+   <div class="lg:w-1/2 space-y-6">
+  <!-- <h2 class="text-sm uppercase font-semibold tracking-widest text-start underline" style="font-family: 'Times New Roman', serif;">
+    Places to Visit Nearby
+  </h2> -->
+  <h1 class="text-4xl lg:text-5xl font-bold leading-tight text-start" style="font-family: 'Times New Roman', serif;">
+    Explore the historic heart of <span class="text-green-300">Gujarat through iconic heritage sites</span>
+  </h1>
+  <p class="text-lg text-gray-500 text-start">
+    Discover the grandeur of Gujarat's architectural wonders and cultural richness. From ancient stepwells to majestic temples, every monument tells a story of India's glorious past.
+  </p>
+  <ul class="space-y-2">
+    <li class="flex items-center space-x-2 text-start">
+      <span class="text-green-300">✓</span>
+      <span>Step into history at the UNESCO-listed Rani ki Vav, Patan</span>
+    </li>
+    <li class="flex items-center space-x-2 text-start">
+      <span class="text-green-300">✓</span>
+      <span>Experience the majestic presence of the Statue of Unity.</span>
+    </li>
+    <li class="flex items-center space-x-2 text-start">
+      <span class="text-green-300">✓</span>
+      <span>Visit Champaner-Pavagadh Archaeological Park, a historic treasure trove</span>
+    </li>
+    <li class="flex items-center space-x-2 text-start">
+      <span class="text-green-300">✓</span>
+      <span>Experience spiritual calm at Dwarkadhish Temple, Dwarka</span>
+    </li>
+  </ul>
+</div>
+
+
+    <!-- Right: Image Gallery -->
+    <div class="w-full lg:w-1/2 mt-12 lg:mt-0 flex flex-wrap justify-center items-center gap-4">
+      <div class="carousel-container w-full max-w-[300px] md:max-w-[500px]">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide" *ngFor="let image of images2; let i = index" [class.active]="currentIndex === i">
+            <img [src]="image" class="carousel-image" [alt]="'Image ' + (i + 1)">
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <button *ngFor="let image of images2; let i = index" (click)="goToSlide(i)" [class.active]="currentIndex === i"
+            class="indicator-dot">
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
