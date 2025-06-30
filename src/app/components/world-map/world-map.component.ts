@@ -44,7 +44,7 @@ export class WorldMapComponent implements OnInit {
 
     // Add layer control
     const baseMaps = {
-      "Street Map": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
+      // "Street Map": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
       "Satellite": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')
     };
     L.control.layers(baseMaps).addTo(this.map);

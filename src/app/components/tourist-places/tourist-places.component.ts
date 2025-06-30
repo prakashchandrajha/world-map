@@ -14,10 +14,9 @@ export class TouristPlacesComponent implements OnInit {
   selectedCountry: string = '';
   images2 = [
       
+    'assets/images/heritage-sites/g2.jpg',
     'assets/images/heritage-sites/g3.jpg',
     'assets/images/heritage-sites/g4.jpg',
-    'assets/images/heritage-sites/g5.jpg',
-    'assets/images/heritage-sites/g7.jpg',
     'assets/images/heritage-sites/g6.jpg',
 
     
