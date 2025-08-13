@@ -1,0 +1,53 @@
+.profileCard_container {
+    position: relative;
+}
+
+.profileCard_container::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 5px dashed rgba(156, 163, 175, 0.5);
+    border-radius: 50%;
+    animation: rotate 30s linear infinite;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .profileCard_container {
+        transform: scale(0.7);
+        margin: -100px auto;
+    }
+
+    .profile_item {
+        transform: scale(0.8);
+    }
+
+    .profile_item span {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .profileCard_container {
+        transform: scale(0.6);
+        margin: -150px auto;
+    }
+
+    .profile_item {
+        transform: scale(0.7);
+    }
+
+    .profile_item span {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+} 
