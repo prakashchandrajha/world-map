@@ -1,37 +1,53 @@
-<header
-  class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border border-gray-100 bg-white/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-full lg:max-w-screen-lg">
-  <div class="px-4">
-    <div class="flex items-center justify-between">
-      <div class="flex shrink-0">
-        <a aria-current="page" class="flex items-center" href="/">
-          <img class="h-7 w-auto" src="../../../assets/images/l_logo.png" alt="">
-          <p class="sr-only">Website Title</p>
-        </a>
-      </div>
+<nav class="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-sm">
+  <div class="container mx-auto px-4 py-4">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center space-x-3">
+        <div class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary to-cooperative rounded-full shadow-md">
+          <!-- Globe Icon -->
+          <i class="fas fa-globe w-6 h-6 text-sky-500"></i>
 
-      <!-- Increased gap between menu items -->
-      <div class="hidden md:flex md:items-center md:justify-center md:gap-20">
-        <a aria-current="page"
-          class="inline-block rounded-lg px-2 py-1 text-lg font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-          href="#" [routerLink]="''">Home</a>
-        <a class="inline-block rounded-lg px-2 py-1 text-lg font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-          href="#" [routerLink]="'/heritage-site'">Heritage Sites</a>
-        <a class="inline-block rounded-lg px-2 py-1 text-lg font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-          href="#" [routerLink]="'/member'">Members</a>
-      </div>
-      <div class="flex items-center justify-end gap-3">
-        <!-- Location Icon Wrapper -->
-        <div class="inline-flex items-center justify-center rounded-full p-2 bg-white shadow-sm hover:bg-gray-100 transition-all duration-150">
-          
-          <img src="../../../assets/images/hdr_logo.png" alt="" style="height: 32px; width: 32px;">
         </div>
-        
+        <div>
+          <h1 class="text-2xl font-bold bg-gradient-to-r from-black to-sky-500 bg-clip-text text-transparent">
+  Cooperative Cultural Heritage
+</h1>
+
+          <p class="text-sm text-muted-foreground">International Cooperative Alliance</p>
+        </div>
       </div>
-      
-    </div>
-    
-  </div>
   
-</header>
+    </div>
+
+    <!-- Tabs -->
+    <div class="w-full">
+  <div class="grid w-full grid-cols-5 bg-gray-50 rounded-lg border border-gray-200">
+    <a routerLink="/" 
+       class="flex items-center gap-2 px-3 py-2 rounded-md text-[#8B5E3C] hover:bg-gray-100 data-[active=true]:bg-white data-[active=true]:shadow-sm transition-all">
+      <i class="fas fa-globe w-4 h-4"></i>
+      <span class="hidden sm:inline">Home</span>
+    </a>
+    <a class="flex items-center gap-2 px-3 py-2 rounded-md text-[#8B5E3C] hover:bg-gray-100 data-[active=true]:bg-white data-[active=true]:shadow-sm transition-all">
+      <i class="fas fa-book-open w-4 h-4"></i>
+      <span class="hidden sm:inline">Categories</span>
+    </a>
+    <a class="flex items-center gap-2 px-3 py-2 rounded-md text-[#8B5E3C] hover:bg-gray-100 data-[active=true]:bg-white data-[active=true]:shadow-sm transition-all">
+      <i class="fas fa-file-alt w-4 h-4"></i>
+      <span class="hidden sm:inline">Standards</span>
+    </a>
+    <a routerLink="/world-map" 
+       class="flex items-center gap-2 px-3 py-2 rounded-md text-[#8B5E3C] hover:bg-gray-100 data-[active=true]:bg-white data-[active=true]:shadow-sm transition-all">
+      <i class="fas fa-globe w-4 h-4"></i>
+      <span class="hidden sm:inline">World Map</span>
+    </a>
+    <a routerLink="/member" 
+       class="flex items-center gap-2 px-3 py-2 rounded-md text-[#8B5E3C] hover:bg-gray-100 data-[active=true]:bg-white data-[active=true]:shadow-sm transition-all">
+      <i class="fas fa-users w-4 h-4"></i>
+      <span class="hidden sm:inline">Team</span>
+    </a>
+  </div>
+</div>
 
 
+  </div>
+</nav>
